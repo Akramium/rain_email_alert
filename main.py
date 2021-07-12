@@ -16,6 +16,7 @@ parameters = {
 }
 
 response = requests.get(url=END_POINT, params=parameters)
+# Try to add try except or a simple if here
 response.raise_for_status()
 weather_data = response.json()["hourly"][:12]
 
